@@ -1,0 +1,1779 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<!-- Page Title -->
+	<title>JSConfCO 2018</title>
+
+	<!-- Compressed Styles -->
+	<link href="css/slides.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom Styles -->
+	<!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
+
+	<!-- jQuery 3.3.1 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Compressed Scripts -->
+	<!-- <script src="js/plugins.js" type="text/javascript"></script> -->
+	<script src="js/slides.min.js" type="text/javascript"></script>
+
+	<!-- Custom Scripts -->
+	<!-- <script src="js/custom.js" type="text/javascript"></script> -->
+
+	<!-- Fonts and Material Icons -->
+	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Nunito:100,300,400,500,600,800|Nunito:300|Nunito:600|Material+Icons" />
+	<style type="text/css">
+		.slides,
+		.slides p {
+			font-family: 'Nunito', sans-serif;
+			font-weight: 300;
+		}
+
+		.slides h1,
+		.slides h2,
+		.slides h3,
+		.slides h4,
+		.slides h5,
+		.slides h6 {
+			font-family: 'Nunito', sans-serif;
+			font-weight: 300;
+		}
+
+		.slides .button,
+		.slides .slides-form {
+			font-family: 'Nunito', sans-serif;
+			font-weight: 600;
+		}
+	</style>
+
+	<!-- for desktop -->
+	<script>
+		window.disableOnScroll = 1;
+	</script>
+
+	<!-- for mobile -->
+	<script>
+		window.disableOnSwipe = 1;
+	</script>
+
+</head>
+
+<body class="slides cards fast noPreload animated">
+
+	<!-- SVG Library -->
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+		<symbol id="close" viewBox="0 0 30 30">
+			<path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z" />
+		</symbol>
+
+		<symbol id="close-small" viewBox="0 0 11 11">
+			<path d="M6.914 5.5l3.793-3.793c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-3.793 3.793-3.793-3.793c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l3.793 3.793-3.793 3.793c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l3.793-3.793 3.793 3.793c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-3.793-3.793z" />
+		</symbol>
+
+		<symbol id="arrow-left" viewBox="0 0 29 56">
+			<path d="M28.7.3c.4.4.4 1 0 1.4l-26.3 26.3 26.3 26.3c.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0l-27-27c-.4-.4-.4-1 0-1.4l27-27c.3-.3 1-.4 1.4 0z" />
+		</symbol>
+
+		<symbol id="arrow-right" viewBox="0 0 29 56">
+			<path d="M.3 55.7c-.4-.4-.4-1 0-1.4l26.3-26.3-26.3-26.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l27 27c.4.4.4 1 0 1.4l-27 27c-.3.3-1 .4-1.4 0z" />
+		</symbol>
+
+		<symbol id="back" viewBox="0 0 20 20">
+			<path d="M2.3 10.7l5 5c.4.4 1 .4 1.4 0s.4-1 0-1.4l-3.3-3.3h11.6c.6 0 1-.4 1-1s-.4-1-1-1h-11.6l3.3-3.3c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3s-.5.1-.7.3l-5 5c-.2.2-.3.5-.3.7 0 .2.1.5.3.7z" />
+		</symbol>
+
+		<symbol id="menu" viewBox="0 0 18 18">
+			<path d="M16 5h-14c-.6 0-1-.4-1-1 0-.5.4-1 1-1h14c.5 0 1 .4 1 1s-.4 1-1 1zm-14 5h14c.5 0 1-.4 1-1 0-.5-.4-1-1-1h-14c-.6 0-1 .4-1 1s.4 1 1 1zm14 3h-14c-.5 0-1 .4-1 1 0 .5.4 1 1 1h14c.5 0 1-.4 1-1s-.4-1-1-1z" />
+		</symbol>
+
+		<symbol id="share" viewBox="0 0 18 18">
+			<path d="M16 8c-.6 0-1 .4-1 1v6h-12v-6c0-.6-.4-1-1-1s-1 .4-1 1v6c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-6c0-.6-.4-1-1-1zm-2.3-2.3c.4-.4.4-1 0-1.4l-4-4c-.4-.4-1-.4-1.4 0l-4 4c-.4.4-.4 1 0 1.4s1 .4 1.4 0l2.3-2.3v7.6c0 .6.4 1 1 1s1-.4 1-1v-7.6l2.3 2.3c.4.4 1 .4 1.4 0z" />
+		</symbol>
+
+		<symbol id="arrow-down" viewBox="0 0 24 24">
+			<path d="M12 18c-.2 0-.5-.1-.7-.3l-11-10c-.4-.4-.4-1-.1-1.4.4-.4 1-.4 1.4-.1l10.4 9.4 10.3-9.4c.4-.4 1-.3 1.4.1.4.4.3 1-.1 1.4l-11 10c-.1.2-.4.3-.6.3z" />
+		</symbol>
+
+		<symbol id="arrow-up" viewBox="0 0 24 24">
+			<path d="M11.9 5.9c.2 0 .5.1.7.3l11 10c.4.4.4 1 .1 1.4-.4.4-1 .4-1.4.1l-10.4-9.4-10.3 9.4c-.4.4-1 .3-1.4-.1-.4-.4-.3-1 .1-1.4l11-10c.1-.2.4-.3.6-.3z" />
+		</symbol>
+
+		<symbol id="arrow-top" viewBox="0 0 18 18">
+			<path d="M15.7 7.3l-6-6c-.4-.4-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l4.3-4.3v11.6c0 .6.4 1 1 1s1-.4 1-1v-11.6l4.3 4.3c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4z" />
+		</symbol>
+
+		<symbol id="play" viewBox="0 0 30 30">
+			<path d="M7 30v-30l22 15z" />
+		</symbol>
+
+		<symbol id="chat" viewBox="0 0 18 18">
+			<path d="M5,17c-0.2,0-0.3,0-0.4-0.1C4.2,16.7,4,16.4,4,16v-2H2c-1.1,0-2-0.9-2-2V3c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v9 c0,1.1-0.9,2-2,2H9.3l-3.7,2.8C5.4,16.9,5.2,17,5,17z M2,12h3.5C5.8,12,6,12.2,6,12.5V14l2.4-1.8C8.6,12.1,8.8,12,9,12h7V3H2V12z M13,7H5C4.4,7,4,6.6,4,6s0.4-1,1-1h8c0.6,0,1,0.4,1,1S13.6,7,13,7z M13,10H5c-0.6,0-1-0.4-1-1s0.4-1,1-1h8c0.6,0,1,0.4,1,1 S13.6,10,13,10z" />
+		</symbol>
+
+		<symbol id="mail" viewBox="0 0 18 18">
+			<path d="M16 2h-14c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-10c0-1.1-.9-2-2-2zm0 2v.5l-7 4.3-7-4.4v-.4h14zm-14 10v-7.2l6.5 4c.1.1.3.2.5.2s.4-.1.5-.2l6.5-4v7.2h-14z" />
+		</symbol>
+
+		<symbol id="sound-on" viewBox="0 0 18 18">
+			<path d="M8.5,0.1C8.1-0.1,7.7,0,7.4,0.2L3.7,3H2C0.9,3,0,3.9,0,5v6c0,1.1,0.9,2,2,2h1.7l3.7,2.8C7.6,15.9,7.8,16,8,16 c0.2,0,0.3,0,0.4-0.1C8.8,15.7,9,15.4,9,15V1C9,0.6,8.8,0.3,8.5,0.1z M7,13l-2.4-1.8C4.4,11.1,4.2,11,4,11l-2,0l0-6h2 c0.2,0,0.4-0.1,0.6-0.2L7,3V13z M11.7,9.9l0.7,1.9C13.9,11.2,15,9.7,15,8c0-1.7-1.1-3.2-2.7-3.8l-0.7,1.9C12.5,6.4,13,7.2,13,8C13,8.9,12.5,9.6,11.7,9.9z M12.2,1.1l-0.3,2C14.3,3.5,16,5.6,16,8s-1.8,4.5-4.2,4.9l0.3,2C15.6,14.3,18,11.4,18,8C18,4.6,15.6,1.7,12.2,1.1z" />
+		</symbol>
+
+		<symbol id="sound-off" viewBox="0 0 18 18">
+			<path d="M15.9,8l1.8-1.8c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-1.8,1.8l-1.8-1.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4L13.1,8l-1.8,1.8 c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.8-1.8l1.8,1.8c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L15.9,8z M8.5,0.1C8.1-0.1,7.7,0,7.4,0.2L3.7,3H2C0.9,3,0,3.9,0,5v6c0,1.1,0.9,2,2,2h1.7l3.7,2.8C7.6,15.9,7.8,16,8,16 c0.2,0,0.3,0,0.4-0.1C8.8,15.7,9,15.4,9,15V1C9,0.6,8.8,0.3,8.5,0.1z M7,13l-2.4-1.8C4.4,11.1,4.2,11,4,11l-2,0l0-6h2 c0.2,0,0.4-0.1,0.6-0.2L7,3V13z" />
+		</symbol>
+
+		<!-- social -->
+
+		<symbol id="facebook" viewBox="0 0 24 24">
+			<path d="M24 1.3v21.3c0 .7-.6 1.3-1.3 1.3h-6.1v-9.3h3.1l.5-3.6h-3.6v-2.2c0-1.1.3-1.8 1.8-1.8h1.9v-3.2c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.7h-3.1v3.6h3.1v9.2h-11.5c-.7 0-1.3-.6-1.3-1.3v-21.4c0-.7.6-1.3 1.3-1.3h21.3c.8 0 1.4.6 1.4 1.3z" />
+		</symbol>
+
+		<symbol id="medium" viewBox="0 0 130.8 104">
+			<path d="M15.5 21.2c.2-1.6-.5-3.2-1.7-4.3l-12.1-14.7v-2.2h38l29.3 64.4 25.8-64.4h36.2v2.2l-10.5 10c-.9.7-1.3 1.8-1.2 2.9v73.7c0 1.1.3 2.2 1.2 2.9l10.2 10v2.2h-51.3v-2.2l10.6-10.2c1-1 1-1.3 1-2.9v-59.6l-29.4 74.7h-4l-34.2-74.7v50.3c0 2.2.4 4.2 1.9 5.7l13.7 16.8v2.2h-39v-2.2l13.8-16.7c1.5-1.5 1.8-3.3 1.8-5.7l-.1-58.2z" />
+		</symbol>
+
+		<symbol id="twitter" viewBox="0 1 24 23">
+			<path d="M21.5 7.6v.6c0 6.6-5 14.1-14 14.1-2.8 0-5.4-.8-7.6-2.2l1.2.1c2.3 0 4.4-.8 6.1-2.1-2.2 0-4-1.5-4.6-3.4.3.1.6.1.9.1.5 0 .9-.1 1.3-.2-2.1-.6-3.8-2.6-3.8-5 .7.4 1.4.6 2.2.6-1.3-.9-2.2-2.4-2.2-4.1 0-.9.2-1.8.7-2.5 2.4 3 6.1 5 10.2 5.2-.1-.4-.1-.7-.1-1.1 0-2.7 2.2-5 4.9-5 1.4 0 2.7.6 3.6 1.6 1-.3 2.1-.7 3-1.3-.4 1.2-1.1 2.1-2.2 2.7 1-.1 1.9-.4 2.8-.8-.6 1.1-1.4 2-2.4 2.7z" />
+		</symbol>
+
+		<symbol id="youtube" viewBox="0 0 24 24">
+			<path d="M23.6 6.3c-.3-1.2-1.4-2.2-2.6-2.3-3-.3-6-.3-9-.3s-6 0-9 .3c-1.2.1-2.3 1.1-2.6 2.3-.4 1.8-.4 3.8-.4 5.7 0 1.9 0 3.9.4 5.7.3 1.2 1.4 2.2 2.6 2.3 3 .3 6 .3 9 .3s6 0 9-.3c1.3-.1 2.3-1.1 2.6-2.4.4-1.7.4-3.7.4-5.6 0-1.9 0-3.9-.4-5.7zm-14.1 9v-6.6l6.5 3.3-6.5 3.3z" />
+		</symbol>
+
+	</svg>
+
+	<!-- Navigation -->
+	<nav class="side pole left">
+		<div class="navigation">
+			<ul></ul>
+		</div>
+	</nav>
+
+	<!-- Top menu -->
+	<nav class="panel top white">
+		<div class="sections desktop">
+			<div class="left"><a href="#home" title="JSConfCO"><img style="height: 50px; width:auto;" src="assets/svg/logo-black.svg" /></a></div>
+			<div class="center">
+				<ul class="menu">
+					<li><a href="#venue">Venue</a></li>
+					<li><a href="#tickets">Tickets</a></li>
+					<li><a href="#speakers">Speakers</a></li>
+					<li><a href="#schedule">Schedule</a></li>
+					<!-- <li><a href="#opportunity">Oportunity</a></li> -->
+					<li><a href="#sponsors">Sponsors</a></li>
+				</ul>
+			</div>
+			<div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg>
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
+					</svg></span></div>
+		</div>
+		<div class="sections compact hidden">
+			<div class="left"><a href="#" title="JSConfCO"><svg style="width:82px;height:24px">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" href="./assets/svg/logo-black.svg"></use>
+					</svg></a></div>
+			<div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg>
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
+					</svg></span></div>
+		</div>
+	</nav>
+
+	<!-- Sidebar -->
+	<nav class="sidebar" data-sidebar-id="1">
+		<div class="close"><svg>
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+			</svg></div>
+		<div class="content">
+			<a href="#" class="logo"><img src="./assets/svg/logo-white.svg" style="height: 70px; width: auto;" /></a>
+			<ul class="mainMenu margin-top-3">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#venue">Venue</a></li>
+				<li><a href="#tickets">Tickets</a></li>
+				<li><a href="#speakers">Speakers</a></li>
+				<li><a href="#schedule">Schedule</a></li>
+				<!-- <li><a href="#opportunity">Oportunity</a></li> -->
+				<li><a href="#sponsors">Sponsors</a></li>
+			</ul>
+			<ul class="subMenu small opacity-8">
+				<li><a href="https://jsconf.com/codeofconduct.html">Code of conduct</a></li>
+				<!-- <li><a href="#cfp">Call for proposals</a></li> -->
+				<!-- <li><a href="#archive">Archive</a></li> -->
+			</ul>
+			<ul class="social opacity-8">
+				<li><a href="https://twitter.com/jsconfco"><svg>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+						</svg></a></li>
+				<li><a href="https://facebook.com/jsconfco"><svg>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+						</svg></a></li>
+				<li><a href="https://www.youtube.com/channel/UCIK8anLUIq0PHurZzNWe6IQ"><svg>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#youtube"></use>
+						</svg></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Home -->
+	<section data-name="home" data-title="Home" class="slide whiteSlide fromLeft autoHeight">
+		<div class="content">
+			<div class="container">
+				<div class="wrap">
+					<div class="home-bird hideForTablet"></div>
+					<div class="home-bird showForTablet hideForPhablet" style="background-size: 200% auto; display:none;"></div>
+					<div class="home-bird showForPhablet hideForPhone" style="background-size: 200% auto; display:none;"></div>
+					<div class="home-bird showForPhone" style="background-size: 280% auto; background-position-x: 55%; display:none;"></div>
+					<div class="fix-12-12">
+						<div style="height: 400px;" class="hideForTablet"></div>
+						<div style="height: 300px; display:none;" class="showForTablet hideForPhablet"></div>
+						<div style="height: 300px; display:none;" class="showForPhablet hideForPhone"></div>
+						<div style="height: 250px; display:none;" class="showForPhone"></div>
+						<div class="fix-6-12 left toRight">
+							<h1 class="ae-1">November 16th & 17th, 2018<br />Medellín, Colombia</h1>
+							<p class="ae-2"><span class="opacity-8">Bringing the JavaScript community under one roof in Colombia.</span></p>
+							<a href="#tickets" class="button blue gradient crop ae-3">Get your tickets</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Venue -->
+	<section data-name="venue" data-title="venue" class="slide">
+		<div class="content">
+			<div class="container">
+				<div class="wrap">
+
+					<div class="fix-12-12">
+						<ul class="flex reverse" style="margin-bottom: 50px;">
+							<li class="col-6-12 left">
+								<h1 class="ae-1 fromLeft done">Venue</h1>
+								<p class="ae-2 fromLeft done"><span class="opacity-8">Ruta N Calle 67 #52-20. Medellín Colombia</span></p>
+							</li>
+							<li class="col-6-12 cell-16">
+								<ul class="grid">
+									<li class="col-11-12 toRight">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9939154029676!2d-75.56873768405266!3d6.2645293278548095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428e695083c29%3A0x99f177323f8c67d5!2sRuta+N!5e0!3m2!1sen!2sco!4v1537364034090"
+										 width="100%" height="280px" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ul class="flex reverse">
+							<li class="col-6-12 left">
+								<h1 class="ae-1 fromLeft done">Recommended Hotel</h1>
+								<p class="ae-2 fromLeft done"><span class="opacity-8">Hotel Diez. Cl 10A #34-11, Medellín, Antioquia.</span></p>
+								<p class="ae-2 fromLeft done"><span class="opacity-8">There will be free transportation provided leaving Diez
+										Hotel to and from Ruta N, conference venue, in the morning and evening.</span></p>
+								<a href="https://reservations.travelclick.com/103293?groupID=2260252" target="_blank" class="button green gradient crop ae-3 fromCenter done">Reserve
+									with a discount here</a>
+							</li>
+							<li class="col-6-12 cell-16">
+								<ul class="grid">
+									<li class="col-11-12 toRight">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4144293887907!2d-75.56744468405272!3d6.208942328459814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442828504c52eb%3A0x72c54a255775d0f7!2sDiez+Hotel+Categor%C3%ADa+Colombia!5e0!3m2!1sen!2sco!4v1537365011321"
+										 width="100%" height="280px" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="background" style="background-image: url(./assets/svg/venue.svg);"></div>
+	</section>
+
+	<!-- Tickets -->
+	<section data-name="tickets" data-title="Tickets" class="slide autoHeight">
+		<div class="content">
+			<div class="container">
+				<div class="wrap">
+
+					<div class="fix-12-12">
+						<h1 class="ae-1">Tickets</h1>
+						<ul class="grid grid-83 noSpaces equal ae-2 fadeIn">
+							<li class="col-3-12 ae-3 whitePrice">
+								<h3>Early Bird</h3>
+								<div class="price ae-5"><span class="currency">$</span>180</div>
+								<div class="ae-5">
+									<h6 class="uppercase bold small opacity-4">Date: Jun 13th, 2018</h6>
+								</div>
+								<div class="margin-top-3 margin-bottom-3 equalElement ae-6">
+									<ul class="p tiny">
+										<li><strong></strong></li>
+										<li class="opacity-7"></li>
+										<li class="opacity-7"></li>
+										<li><strong>Language</strong></li>
+										<li class="opacity-7">Spanish and English. We will provide translation devices if needed.</li>
+									</ul>
+								</div>
+								<a href="javascript:;" class="button green gradient wide cropSides cropBottom ae-7">Sold Out</a>
+							</li>
+							<li class="col-3-12 ae-3 whitePrice">
+								<h3>Second Batch</h3>
+								<div class="price ae-5"><span class="currency">$</span>210</div>
+								<div class="ae-5">
+									<h6 class="uppercase bold small opacity-4">Date: Jul 18th, 2018</h6>
+								</div>
+								<div class="margin-top-3 margin-bottom-3 equalElement ae-6">
+									<ul class="p tiny">
+										<li><strong>Opportunity tickets</strong></li>
+										<li class="opacity-7">Donate for others</li>
+										<li class="opacity-7">$210 + 25%</li>
+										<li><strong>Language</strong></li>
+										<li class="opacity-7">Spanish and English. We will provide translation devices if needed.</li>
+									</ul>
+								</div>
+								<a href="javascript:;" class="button green gradient wide cropSides cropBottom ae-7">Sold Out</a>
+							</li>
+							<li class="col-3-12 ae-3 whitePrice">
+								<h3>Third Batch</h3>
+								<div class="price ae-5"><span class="currency">$</span>210</div>
+								<div class="ae-5">
+									<h6 class="uppercase bold small opacity-4">Date: Aug 15th, 2018</h6>
+								</div>
+								<div class="margin-top-3 margin-bottom-3 equalElement ae-6">
+									<ul class="p tiny">
+										<li><strong>Opportunity tickets</strong></li>
+										<li class="opacity-7">Donate for others</li>
+										<li class="opacity-7">$210 + 25%</li>
+										<li><strong>Language</strong></li>
+										<li class="opacity-7">Spanish and English. We will provide translation devices if needed.</li>
+									</ul>
+								</div>
+								<a href="javascript:;" class="button green gradient wide cropSides cropBottom ae-7">Sold Out</a>
+							</li>
+							<li class="col-3-12 ae-4" style="background: #C94545; color: white; border: 1px solid #C94545;">
+								<h3>Last Batch</h3>
+								<div class="price ae-6"><span class="currency">$</span>210</div>
+								<div class="ae-6">
+									<h6 class="uppercase bold small opacity-4">Date: Sept 19th, 2018</h6>
+								</div>
+								<div class="margin-top-3 margin-bottom-3 equalElement ae-7">
+									<ul class="p tiny">
+										<li><strong>Opportunity tickets</strong></li>
+										<li class="opacity-7">Donate for others</li>
+										<li class="opacity-7">$210 + 25%</li>
+										<li><strong>Language</strong></li>
+										<li class="opacity-7">Spanish and English. We will provide translation devices if needed.</li>
+									</ul>
+								</div>
+								<a href="https://ti.to/colombia-dev/jsconfco" target="_blank" class="button blue gradient wide cropSides cropBottom ae-8">Buy
+									NOW!</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12" style="margin-top: 50px;">
+						<div class="fix-10-12 toCenter header-64">
+							<p><span class="opacity-8">Get to our conference and get <strong>two full days of talks by
+										international and local speakers</strong>. Upon registration, you will receive swags from JSConf Colombia,
+									our sponsors, and partners. Each day you can expect two breaks one in the middle of the morning and another in
+									the middle of the afternoon where we will provide snacks.</span></p>
+						</div>
+						<ul class="grid fixedSpaces equal left grid-64">
+							<li class="col-4-12">
+								<a href="https://github.com/coljs/jsconfco" target="_blank" class="cell-64 rounded equalElement">
+									<i class="material-icons">group_work</i>
+									<h3>Do you belogn to a Community Group?</h3>
+									<p class="tiny opacity-6">We don’t have any discount for groups, but we offer community discounts. In order to
+										qualify, find a group of 6 people and create an issue in https://github.com/coljs/jsconfco. These discounts
+										are for community members only and don't apply to companies.</p>
+								</a>
+							</li>
+							<li class="col-4-12">
+								<a href="mailto:hola@jsconf.co" class="cell-64 rounded equalElement">
+									<i class="material-icons">school</i>
+									<h3>Do you want to apply for a Scholarship/Opportunity?</h3>
+									<p class="tiny opacity-6"><strong>Closed on August 12th, 2018</strong>. If you are part of a minority
+										underrepresented group or a socially disadvantaged population, please apply to our Opportunity program.
+										Currently, we are making all the arrangements to get you here! If you have any questions please drop us a
+										line in this email: hola@jsconf.co</p>
+								</a>
+							</li>
+							<li class="col-4-12">
+								<a href="#" class="cell-64 rounded equalElement last">
+									<i class="material-icons">monetization_on</i>
+									<h3>Do you want to help for our Scholarship/Opportunity program?</h3>
+									<p class="tiny opacity-6">Each batch we will provide tickets with 25% of the value for donations. If you are
+										interested in helping our Opportunity program (scholarships) by donating without buying a ticket please reach
+										out to us here: hola@jsconf.co</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="white-bird hideForTablet"><img src="./assets/svg/white-bird.svg" /></div>
+		<div class="background" style="background-image:url(./assets/svg/tickets.svg)"></div>
+	</section>
+
+	<!-- Speakers -->
+	<section data-name="speakers" data-title="Speakers" class="slide whiteSlide autoHeight">
+		<div class="content">
+			<div class="container">
+				<div class="wrap speakers">
+
+					<div class="fix-10-12">
+						<h1 class="huge margin-bottom-2">Great Speakers!</h1>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=ebfbd1812d008bbee7018e721296a9a1,400,400,True,False,3009a4cf-7a65-4680-a51f-6794eae2be88.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">I studied business engineering; after finishing college I started
+										working as a financial analyst for 3 years. In my first year working as a financial analyst I started having
+										some interest in coding, so was there when I decided to spend all my free nights and weekends to study by
+										myself until I decided to quit my, so I can code more and make it my first job. This is my first year as
+										a full-time developer, in this year I had contributed to Node.js, Next.js, and Express.js. Also, I had
+										created multiple npm packages including easygraphql-mock, validate data schema on express.js, mongodb plugin
+										that encrypts the data just before saving it to the database and more.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Alejandro Estrada</strong>
+									<a href="https://twitter.com/estrada9166" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=24ce5f03a408a13f60775a08d251dc5f,400,400,True,False,dc-44e1-4fdc-bec0-dec96e884cb1.f86500a5-392d-4f5c-a5dc-03d8e8eec9ac.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Alexandra Cárdenas is a Colombian composer, programmer and
+										improviser who has followed a path from Western classical composition to improvisation and live electronics.
+										Using open source software, her work is focused on the exploration of the musicality of code and the
+										algorithmic behavior of music. An important part of this exploration consists of the practice of live coding,
+										including performances in many countries as a pioneer of the Algorave scene. She currently lives in Berlin,
+										Germany, where she realized a Masters in Sound Studies at the University of the Arts. Olivia Jack is a
+										programmer and artist who works frequently with open-source software, cartography, live coding, and
+										experimental interfaces. Recent projects include media development for the experimental dance performance
+										Nodos: Cuerpos en Expansión, part of the Festival de Danza en La Ciudad in Bogotá; as well as the Laboratory
+										of Possibilities, a participatory media installation at the Oakland Museum of California. She is the
+										developer of Hydra, a browser-based platform for live coding visuals that is inspired by analog modular
+										synthesis. Originally from San Francisco, she currently lives and works in Bogotá, Colombia.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Alexandra Cárdenas and Olivia Jack</strong>
+									<a href="https://twitter.com/tiemposdelruido" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=73843ec7628a17db10af565438ecc526,400,400,True,False,4edaf456-1668-4aa3-a744-645ceed3d912.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Sir Brian is a knight in the Azure Order and swears fealty to Lord
+										Clippy of House Microsoft. Before obtaining knighthood, he was a vassal in the Great Houses of Netflix,
+										LinkedIn and Reddit. When not working the land or dreaming of life at court, Brian finds time to teach on
+										Frontend Masters, run his mouth on Front End Happy Hour, travel all over the world, and play with his
+										adorable dog. Brian leads his simple life in the exotic kingdom of Seattle, WA.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Brian Holt</strong>
+									<a href="https://twitter.com/holtbt" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=e298e056c0424ebb5e96008eb8aab716,400,400,True,False,8e75b334-82d4-4ab9-a27a-9a3f87a72e27.jpg" />
+							</li>
+							<li class="col-8-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Desarrollador Fullstack con 9 años de experiencia en el mundo
+										web/mobile usando diferentes lenguajes como son PHP,javascript, java, python y frameworks como React.js,
+										Angular.js, Express.js, Ruby and Rails entre otros. Actualmente Software Engineer en Univision
+										Colombia involucrado en todo el desarrollo de la Webapp sobre React/Node.js desarrollador principal para la
+										convergencia entre web/mobile.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Camilo Quimbayo</strong>
+									<a href="https://twitter.com/vxcamiloxv" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=877f78bfb203ec859eff6647c773765d,400,400,True,False,2a-3dc9-46e0-816f-34835bb5604d.3e72a081-1a8c-4da2-883b-3f238fdd0937.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Daniel started his career in front of his fathers Sinclair ZX
+										Spectrum. Luckily a brand new thing called \"Word Wide Web\" crossed his path some years later and he built
+										an ugly personal website on GeoCities. Nevertheless he became a go-to-person for websites of all kinds, found
+										out that he needs Perl to send a form by email and MySQL to store things. The rest is history. Perl became
+										PHP, PHP became Node.js and trial and error became craftsmanship. Today, Daniel shares his MacBook with his 4
+										kids and his knowledge working as mentor, lecturer and lead technology strategist at Dynatrace.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Daniel Khan</strong>
+									<a href="https://twitter.com/dkhan" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=6a18c3bf0170f9d7c8a9efe10ea02df3,400,400,True,False,fab3de12-3083-4870-ba26-db0c55805dae.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Electrical Engineer and Applied Mathematician.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Elizabeth Ramirez</strong>
+									<a href="https://twitter.com/eramirem" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=c9100f407054170ca0ba7d461c771b18,400,400,True,False,4c-1bc9-4e52-ad85-b11d1935dee9.2b795ae8-c200-4c89-a466-8ec213b695ff.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">I'm front-end developer at Accenture, Co-Organizer of MedellinCSS,
+										Telecommunications Engineer and CoderDojo Volunteer. I'm very passionate about new technologies, CSS and
+										Visual Art within web browsers.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Estefany Aguilar</strong>
+									<a href="https://twitter.com/teffcode" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=8f621cc72d43aa54ac98b400caf1958b,400,400,True,False,3b-59b3-4065-8305-7845ccdce6e3.78aa7193-ed6d-42a7-b376-6e0ea4b94f70.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Soy desarrollador creativo, profesor en la plataforma Skillshare y
+										speaker en diversas comunidades de tecnología (Bogodev, Makers Colombia). Actualmente, me encuentro
+										trabajando en Node.Js, Processing y Arte Generativo.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Fabio Cortes</strong>
+									<a href="https://twitter.com/fabiojcortes" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=a73fc561a199c093154fadb35df20e99,400,400,True,False,74-29e4-4b0c-bb45-6623b6211bbc.557f9e03-606d-470a-b4e1-dfe525dd448b.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Feross Aboukhadijeh is a programmer, designer, teacher, and mad
+										scientist. He is currently building WebTorrent, a streaming BitTorrent client for the browser, powered by
+										WebRTC. Before that, he built PeerCDN, a peer-to-peer content delivery network that makes sites faster and
+										cheaper. He is a graduate of Stanford University and he has worked at Quora, Facebook, and Intel. In the
+										past, Feross did research in the Stanford human-computer interaction and computer security labs. He enjoys
+										working on \"mad science\" — projects that make people say, \"Whoa! I didn't know that was possible!\".</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Feross Aboukhadijeh</strong>
+									<a href="https://twitter.com/feross" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=45328fea20a6c49c4881f68c5be3ac60,400,400,True,False,c4-3307-476f-a0f8-63ff4d855b18.db01ce0d-8621-4acf-bfe3-73aa2f44bdaa.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Franziska is a member of the Node.js Technical Steering Committee
+										and an expert on ES6 performance. She has a Ph.D. in mathematics and is a software engineer at Google on the
+										Cloud Platform team in New York. Previously, she was on the Chrome V8 team. When she's not working hard on
+										making Node.js better on Google Cloud, she's probably out riding horses.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Franziska Hinkelmann</strong>
+									<a href="https://twitter.com/fhinkel" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=acee72f20d0f8268edb12edb99f58e2f,400,400,True,False,f0e3eb06-7e0d-4d83-b25f-39aca518329f.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Founder of http://www.hackdo.co + @Quibdojs Javascript and C++ Game
+										developer by passion. I love books, art, videogames, Animation and Watercolour painting 😊</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Fredy Andrade</strong>
+									<a href="https://twitter.com/xfry" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=fa48117e7b237fe585ae29119ec1462a,400,400,True,False,1a-247c-4089-b715-5d5b8b46e797.1c5bad94-69d8-4a5c-a46a-16367966af9c.jpeg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Gabrielle es desarrolladora de software en The Financial Times
+										donde contribuye a la manutención de la biblioteca de componentes interna, Origami. Previamente, ella dirigió
+										operaciones para varias empresas de café especial. Es diseñadora gráfica por formación y tiene varias
+										opiniones sobre la tipografía y sobre los quesos.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Gabrielle von Koss</strong>
+									<a href="https://twitter.com/gvonkoss" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=069ff10c13b9f18c2e1bf6cff38342f7,400,400,True,False,23-80de-4d94-8b60-2f2f7e183a8d.38fca9b1-542a-42df-afd4-d68eeec01bd2.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">I am Support Engineer at NodeSource. At NodeSource I spend time
+										working on products, giving talks and fixing other companies issues related to Node.js. I created my own lisp
+										based language, a modern CSS framework and a ton of C libs because I enjoy learning and having fun during the
+										process. Previously worked at Mozilla porting Firefox OS to ARM devices, building IoT tools for web
+										developers and speaking about Rust, Node.js and embedded OS development.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Giovanny Gongora</strong>
+									<a href="https://twitter.com/Gioyik" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=5cd4da16d52fe5a8e0502fb45f7d4dcf,400,400,True,False,d2-bde7-4650-b237-42aad3ad2b40.123591fc-ceb5-4cec-81b3-e6b78aca8dd2.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">I'm a software engineer on Core Experience Team at Pinterest.
+										Passionate about React. I was a Tech Lead while we were migrating Pinterest to React. After migrating the
+										desktop website we decided to bring back to life our mobile website. Before I was a software engineer on
+										Newsfeed at Facebook.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Imad Elyafi</strong>
+									<a href="https://twitter.com/eelyafi" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=590f528effb10993a5e875177dce5ce4,400,400,True,False,ef-dce3-4948-8ffd-c2ce88e4d350.bafbae05-b056-4297-9eea-b8b8c57f92ed.JPG" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Jackie Balzer is the Head of Front-end Development at Behance,
+										Adobe in New York City</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Jackie Balzer</strong>
+									<a href="http://twitter.com/jackiebackwards" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=cdfa81648f5772490b8db7f44bb11020,400,400,True,False,4f2899e9-1ac7-4133-80f9-096254a4fc45.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Co-Founder and CEO of Grok Interactive and Codeup, Jason is a
+										long-time programmer, mentor, author, and teacher.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Jason Straughan</strong>
+									<a href="https://twitter.com/jdstraughan" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=7f9ce4391011b74a662095a2b858f8f1,400,400,True,False,dfe8dd4d-8942-4761-b6d9-15cbc1531d9e.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Jennifer is a self-taught, front-end developer. After starting her
+										career in web and print design, she moved into web development where she became a passionate advocate of test
+										driven development. She is an avid supporter of affordable tech education and has volunteered for the Atlanta
+										JavaScript Meetup, Girl Develop It, and ngGirls. She currently wears many hats at Cypress.io where she codes
+										and tests in JavaScript, writes documentation, manages their open source projects, and designs user
+										interfaces. In her free time, she goes to film festivals, volunteers for local non-profits, and explores
+										Atlanta, her current home.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Jennifer Shehane</strong>
+									<a href="https://twitter.com/jennifershehane" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=07250029c83626952a7cb25eb4e04213,400,400,True,False,e8addd37-7463-49a8-af10-044374da4265.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Desarrollador de software con Lic. en Computación, con más de 8
+										años de experiencia profesional, dedicando los últimos 5 enteramente al desarrollo de videojuegos. Enfocado
+										en programación de Inteligencia Artificial y Gameplay, actualmente trabajando con Unity y HTML5. Autor
+										publicado, charlista con experiencia docente.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Jorge Palacios</strong>
+									<a href="https://twitter.com/pctroll" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=d3e91ffc08d59c2b3d6310a3d67c09da,400,400,True,False,4030513f-1c35-451f-864b-054fa84bbf9b.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">I am a proactive, dedicated and self-taught Systems and Computing
+										Engineering student in my last semester. I am 21 years old and I am passionate about web development, visual
+										analytics, and challenges. I am from a little town called Tocaima where people dreams do not evaporate
+										despite the high temperatures. I have faced different challenges through my life and I am ready to face more.
+										With my youth and my desire to learn as much as my brain can, I want to contribute to the world everything I
+										know.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Juan Guillermo Murillo Castillo</strong>
+									<a href="https://twitter.com/juangmurillo2" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=d08b34e495e2c3a6b669ebe171dc3c53,400,400,True,False,cf-2f0a-4f52-9cdb-99e5f3894441.bc33bce8-d37e-45aa-803f-b70f5cbe2f2d.jpeg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Well, I think the most important thing I can say about myself is
+										that I love learning and I really love creating things. And, as I can't stay away from writing the best code
+										I'm able to, you can find me almost every day on [GitHub](https://github.com/lucasfcosta), contributing to
+										open-source projects and also helping to translate and produce content for other developers. I have already
+										spoken at countless meetups and major events in Brazil such as Front In Poa, JSDay Recife, and The
+										Developer's Conference Florianópolis and at international events such as Voxxed Days Bristol, O'Reilly's 2017
+										FluentConf and NebraskaJS 2017. Now that I've moved to the United Kingdom I expect to do even more talks all
+										around the world :) I've been one of [Chai.js](https://github.com/chaijs/chai) core maintainers since 2015.
+										Chai is one of the most downloaded NodeJS modules and the most famous assertion-focused library around, with
+										outstanding [4.2 million monthly downloads and lots of
+										dependents](http://npm-stat.com/charts.html?package=chai). Being part of such a huge project has not only
+										helped me to learn how to manage an Open Source community but also made me understand difficulties other
+										people had when trying to test their software and then think of ways I could help them to solve their
+										problem. I am also a core maintainer of [Sinon.js](https://www.npmjs.com/package/sinon), which is another
+										very popular project among JavaScript developers and uses lots of meta-programming magic to accomplish its
+										tasks. Now, as a Software Engineer, I still find my experience very useful to write code that has fewer bugs
+										in less time, and I hope I can teach you a trick or two which may save the whole world (or just your job) one
+										day!</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Lucas da Costa</strong>
+									<a href="https://twitter.com/lfernandescosta" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=0bdbeab28f52bf8260326cd4aead7397,400,400,True,False,27-d6ae-4f67-9861-3cabeb37638c.7b922b09-17c8-4418-bf67-38446ebec32e.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Luke has been building stuff for the web since the early 2000s as a
+										hobbyist before starting his development career in 2012. Currently a software engineer at Sky Betting &
+										Gaming, he’s also the host and organiser of LeedsJS. In his spare time he enjoys JavaScript, pixel art,
+										automation and cooking.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Luke Bonaccorsi</strong>
+									<a href="https://twitter.com/LukeB_UK" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=9a91ed3eb40a8fd01c8129f36cc39c7c,400,400,True,False,a4-d998-4730-8759-75a9adb5a7a3.953f3ecf-8394-4485-a3cf-43bbfaf2c913.jpeg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">PM on Chrome at Google. OOCSS, CSSLint, Smush It, Dr Frankenstyle,
+										typeOmatic. CSSConf founder, author, speaker. My views are my own.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Nicole Sullivan</strong>
+									<a href="https://twitter.com/stubbornella" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=2ba2b0fa86f4108ce75cbad2c23cff07,400,400,True,False,f7-d2ca-47fc-a591-58796bd5a77c.8e72f4b1-ec95-4c32-a4ac-f198e2995ab6.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Teacher, translator, manager previously, nowadays software engineer
+										and IT community activist. Passionate about free education and diversity I'm doing all I can to support and
+										promote women in IT. After finishing GeneralAssembly 4 years ago on a web-development immersive 3-month
+										course I step into IT world and started my journey as a web developer in Thoughtworks. Nowadays I'm working
+										in Quantium as a software engineer and Founder of Muses Code JS (former NodeGirls) countrywide non-profit
+										organisation.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Tanya Butenko</strong>
+									<a href="https://twitter.com/ButenkoMe" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-12-12" style="margin-bottom: 200px;">
+						<ul class="flex later margin-top-6 left">
+							<li class="col-3-12">
+								<img src="https://sessionize.com/image?f=3e76a328dfb0723c1b6e8456e3ffb446,400,400,True,False,b86ecfb6-0ad1-4b56-afed-1033b0fa4cfc.jpg" />
+							</li>
+							<li class="col-9-12 box-88">
+								<div class="quoteBubble fromLeft">
+									<p class="cropBottom light opacity-8 tiny">Trent Willis is a Senior UI Engineer at Netflix, where he builds
+										tools and applications to give other engineers insight into their products. He previously worked at LinkedIn
+										and Grooveshark where he helped build products that reached millions of daily users. Additionally, he is the
+										project lead for the QUnit JavaScript testing framework, a frequent contributor to various Open Source
+										projects, and a self-professed music junkie.</p>
+								</div>
+								<p class="margin-top-3 fromRight"><strong>Trent Willis</strong>
+									<a href="https://twitter.com/trentmwillis" target="_blank">
+										<svg class="bluetweet">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="background" style="background-image:url(./assets/svg/speakers.svg)"></div>
+	</section>
+
+	</div>
+
+	<!-- Schedule -->
+	<section data-name="schedule" data-title="Schedule" class="slide whiteSlide autoHeight">
+		<div class="content">
+			<div class="container">
+				<div class="wrap">
+
+					<div class="fix-9-12 ae-1" style="margin-bottom: 50px; margin-top: 150px;">
+						<i class="material-icons">today</i>
+						<h1 style="color: #2A00FF;"><strong>November 16th 2018</strong></h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 8:15 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Registration</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 9:00 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Welcome</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 9:25 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Interferencia</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Alexandra Cárdenas and Olivia Jack</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Live coding performance by Alexandra Cárdenas and Olivia Jack, using Javascript to
+									generate electronic music and visuals in real time. The code is written and modified throughout the
+									performance, and projected so that the audience can see the algorithms as they unfold. The practice of sharing
+									code with the viewers treats code not only as a tool for creating applications, but as a live, creative
+									material that can be heard and experienced. <br /> <br />More about live coding and algorave at: <br />http://cartelurbano.com/musica/alexandra-cardenas-y-el-live-coding-musica-electronica-escrita-en-lenguaje-de-programacion
+									<br />https://www.wired.co.uk/article/algorave <br /></p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 10:05 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Entangled Qubits: Quantum Computing with JavaScript</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Brian Holt</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Qubits, entanglements, and superpositions, oh my! Coming is the great revolution of
+									quantum computing and it’s going to change everything. We inch closer to this amazing breakthrough on a daily
+									basis and we’re beginning as computer scientists to think through what quantum computing means for us as
+									software engineers. Luckily for us as software engineers we too can harness the great power of quantum
+									computing when it arrives. <br /> <br />We’ll first go through the basic units of quantum computing, the
+									terminology, and sorts of problems it can deal with that we can’t deal with today. We are going to discuss how
+									you today can write quantum computing code with a language and runtime called Q#. Q# is a language from the
+									minds of Microsoft that’s specifically made to address quantum computing. Q# is not a complete language and
+									needs a “classical” language to run its operations; we’ll discuss how to do that directly from Node.js. We’ll
+									also discuss all you newest concerns and pitfalls: hopefully your JavaScript doesn’t currently have
+									entanglement bugs! <br /> <br />The future is now. Or soon. We are drawing closer to the reality of quantum
+									computing every day. <br /></p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 10:40 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Shipyard: summarize, navigate and explore multidimensional data without coding</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Juan Guillermo Murillo Castillo</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">First, I will make a brief introduction to visualization and the most important
+									things about it. Later, I will explain which is one of the most important problems in visualizing
+									multi-dimensional datasets. Finally, I will show Shipyard, a visualization tool that I developed with my
+									thesis advisor to ease the navigation, exploration and summarization of large multidimensional datasets. This
+									web application allows the user to load a dataset, preprocess, navigate, explore, summarize, filter, visualize
+									and export the filtered data or the visualization generated.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 11:00 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">BREAK</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 11:20 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Creating Your Own Image Format in the Browser</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Trent Willis</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">JavaScript and the web platform have evolved a lot in the past couple of years. In
+									particular, Service Workers have given modern web applications tremendous power. They allow our apps to
+									deliver content offline, send push notifications, and...create their own image formats? It’s a bit outlandish,
+									but yes! <br /> <br />In this talk, we’ll go on a journey that starts with a dream and a Service Worker and
+									ends with us having created our very own image format that works in the browser. Along the way, we’ll learn
+									about some fantastic new web technologies, such as Streams and Web Assembly, that are shipping in browsers
+									today.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 11:55 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">El error en dar un error por hecho</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Gabrielle von Koss</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Ésta plática es motivada por las palabras que elegimos. El objetivo es observar una
+									comparación entre el lenguaje usado para escribir mensajes de error y el que usamos para comunicarnos en
+									persona, destacando así el espacio que existe para mejorar estos conceptos dentro de la comunidad tecnológica.
+									<br /> <br />El poder de las palabras que usamos puede fácilmente pasar desapercibido en nuestro día a día.
+									Sin embargo, no sirve suponer que existe cierto conocimiento, usar acrónimos o que seamos vagos, ya que la
+									persona que usa nuestro código existe dentro de un espectro infinito de experiencias y comprensión.
+									Similarmente, hay falacia en dar por hecho que la persona con quien nos comunicamos entiende todo nuestro modo
+									de pensar, y que sea familiar con las referencias que damos al hablar — es muy fácil olvidarnos que otros no
+									saben lo que nosotros sabemos. <br /> <br />Por medio de esta plática, vamos a examinar algunas maneras por
+									las cuales nos comunicamos, entender cómo esto puede afectar nuestro público y cómo nos podemos hacer más
+									conscientes de nuestros estilos comunicativos.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 12:30 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Linear Algebra for FE Developers</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Elizabeth Ramirez</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">In Linear Algebra, not only the data that comes from the discretization of continuous
+									systems can be represented in matrix (or tensor) structures, but also the operations performed on this data.
+									Such operations can be linearly composed to produce more complex results and find better representations of
+									this datasets. <br />For example, in Computer Graphics, imagery or imagery time series are represented with
+									sets of values arranged in n-dimensional matrices, being suitable to be manipulated with functions of
+									matrices. <br />This presentation will be focused in matrix functions and their numerical implementation for
+									datasets represented in matrix form, as well as the computation cost of these operations, covering (but not
+									limited to) the following topics: <br /> <br />- Coordinate Systems <br />- Transformations: Rotation,
+									Projection, Stretching, Squeezing, Sheering, Reflection <br />- Polynomial Interpolation</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 1:05 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">LUNCH</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 2:20 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Finding and debugging memory leaks in Node.js</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Giovanny Gongora</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Performance metrics? Response time higher? Memory leak? We would walk through
+									different memory leak situations to identify and analyze patterns that produce an increase of memory, CPU
+									usage, and the load average over time, without any apparent reason. We'll start talking about taking the time
+									to set up a proper test environment to repeat the exact same conditions as in production. Then we'll discuss
+									how to access Node.js memory using V8 Inspector & Chrome Dev Tools, create a dump of the heap memory for the
+									inspected application, with a lot of details about the memory usage, watching memory allocation in real time
+									and finally a compilation of best practices about how we could end fixing the memory leak. In the end, we'll
+									be able to use the right tools to monitor, understand, and debug the memory consumption of a Node.js
+									application on time.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 2:40 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Migrating Pinterest profiles to React</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Imad Elyafi</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">We all have been in situation when we were in one platform and had to move to
+									another. While it’s relatively easy to build a new web app in React, migrating a service that’s constantly
+									changing and used by millions of people is a much more complicated challenge. It’s like changing the engines
+									of an airplane while mid-flight. <br />Some of the problems are: rendering Javascript on the server, measuring
+									the impact, debugging issues, dealing with old resource library and rendering React components inside of the
+									existing JS Framework. <br />The talk is about techniques we tried and challenges we faced while migrating to
+									React at Pinterest. Also, we’ll share our performance and engagement gains after migrating Pinterest’s
+									profiles to React.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 3:15 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Una historia de amor entre Javascript y C++</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Fredy Andrade</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">El desarrollo de experiencias interactivas con buen performance es importante!
+									Javascript es un lenguaje fácil en algunas casos y un mal uso del mismo, puede llevarnos a construir
+									experiencias interactivas lentas y no muy amigables con el usuario. <br /> <br />En esta charla exploraremos
+									la delegación de responsabilidades en las que Javascript -o Node.js- puede ser fuerte y otras en las que C++
+									puede tener un mayor performance en la Generación de Niveles Procedimental para videojuegos. <br /> <br />Ven
+									y conoce esta historia de amor 😊</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 3:50 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Teaching Programming to Kids - by a 13 year old</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Jason Straughan</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Teaching programming to children is hard. Computer Science topics can be difficult to
+									grasp using standard programming languages and tools. Using MIT’s Scratch programming platform, creating games
+									and working software is simple and fun thanks to their drag and drop interface. <br /> <br />Creating loops,
+									controls structures, variables, and other common programming tasks allow users of all ages to build fully
+									functioning games and applications. In this session, we will be creating an entire game from scratch in
+									Scratch. <br /> <br />To prove that this is as simple as it sounds, this session will be led by a 13-year-old.
+									What better way to learn how to teach kids how to code than by learning from a kid? <br /> <br />If you have a
+									kid, are related to a kid, know a kid, or think you may know a kid in the future, then this session is for
+									you. <br /> <br />This will be a dual speaker session lead by Michael and assisted by his father, Jason. There
+									will be live coding, good content, and bad jokes.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 4:25 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">BREAK</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 4:45 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Web & Mobile Convergence @Univision</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Camilo Quimbayo</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">La sesión hablara sobre la experiencia de Univision en la migración de esta de una
+									aplicación monolítica a microservicios y react/node.js como principal motor de las nueva webapp y aplicaciones
+									móviles buscando la convergencia entre estos dos mundos gracias a las ventajas que nos brindan dichas
+									tecnologías. <br /> <br />Se abordaran temas como la arquitectura actual de univision, el monorepo, shared
+									componentes y styled componentes como ayudan estos a construir componentes reusables en el mundo web y mobile.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 5:20 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">The Lost Art of MIDI – Bringing < bgsound> Back to the Web</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Feross Aboukhadijeh</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">In the days of Geocities and Angelfire, a quirky HTML tag called < bgsound> enabled
+										sound files to play in the background of webpages. Usually, these files were in the MIDI format. What a
+										glorious era that was! Sadly, < bgsound> has been removed from browsers and MIDI is obscure and hard to play
+											back. In this talk, we'll bring MIDI and < bgsound> back from the dead using WebAssembly, Emscripten, Web
+												Audio, and Web Components. When we're finished, you'll be able to give your webpages the 90's treatment in
+												a modern, standards-compliant way!</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 5:55 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">CLOSING</h1>
+					</div>
+
+					<div class="fix-9-12 ae-1" style="margin-bottom: 50px;">
+						<i class="material-icons">today</i>
+						<h1 style="color: #2A00FF;"><strong>November 17th 2018</strong></h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 8:15 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Registration</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 9:00 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Intro</h1>
+					</div>
+
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 9:15 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Muses Code JS or How Communities Change People</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Tanya Butenko</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">When I decided to change my career one of the important factors was JavaScript
+									community - a welcoming place with people who had similar interests. For me, it was surprising that everyone
+									was so eager to share knowledge for free, unlike many other professions. Then I decided to be involved. After
+									2 years I started Muses Code JS (former NodeGirls) and it changed my life and lives of other people. Now I
+									want to share lessons I've learned, how leading countrywide community changed my perception of some things and
+									how we managed to change the lives of some women and opinion of some men. <br /> <br />More details: <br />
+									<br />How communities change lives: <br />- what I've learnt by running and organising different types of very
+									successful events, why it is important <br />- why it is important to give back to the community and why even
+									bother <br />- how to build inclusive and diverse community <br />- success stories with lessons learned <br />
+									<br />In few words, Muses Code JS (former NodeGirls) is a non-profit organisation that supports women and
+									other gender minorities in IT and helps to show opportunities in IT and teaches on how to code. We run free
+									workshops, events and internship programs around Australia and outside of it. We have few thousands of
+									followers and grow. <br />It is not the only community I support, it is many others and all of them teach you
+									something new. My motto that I always share with others - if you want to learn more about the topic - organize
+									the event! <br /> <br />My talk is highly inspirational with examples of real people's lives change. Did it on
+									NodeSummit 2018 and got lots of positive feedback. If you have any questions, please, contact me for any
+									additional information.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 9:50 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">IA para videojuegos con JS</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Jorge Palacios</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Conoceremos un poco sobre los retos y técnicas aplicados en la inteligencia
+									artificial para videojuegos, así como exploraremos algunos ejemplos prácticos en JS enfocados en
+									comportamientos cinemáticos y búsqueda de caminos.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 10:25 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">How I started mocking my GraphQL Schema</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Alejandro Estrada</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">In this talk, I will tell you the story of how I created an open source module
+									mocking a GraphQL Schema to help developers around the globe to create easy tests for their APIs. <br /> <br />It
+									will describe the story of why and how this was created and the technical review of the module internals</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 10:45 am</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">BREAK</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 11:05 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">There is a Bluebird in my talk that wants to get out</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Lucas da Costa</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">This is not your usual functional programming talk. In it, I'll explain lambda
+									calculus itself and show how exciting it can be to derive combinators from the most elegant ideas in
+									computability theory. <br /> <br />In it, we'll explore functional programming from a different angle. Instead
+									of talking about functors, bifunctors, profunctors, monads, comonads and other popular concepts we'll take a
+									step back and learn Lambda calculus itself. <br /> <br />How does lambda calculus express computation? How can
+									we represent concepts such as `true` or `false` or, even better, how can we express boolean logic? How can we
+									do arithmetic operations without using any numbers? What about loops? These are a few of the questions we're
+									going to answer and we're gonna do that with small incremental steps. <br /> <br />During all this process
+									we'll also identify some unique and exquisite creatures: birds (or combinators, as some other people call
+									them). These are patterns that will emerge naturally from the process of rediscovering lambda calculus and are
+									guaranteed to blow everyone's mind by their simplicity and elegance. <br /> <br />Rediscovering lambda
+									calculus feels like rediscovering math and finally understanding what is behind functional programming. <br />
+									<br />We'll finally let our Bluebird out. We won't be too tough for him.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 11:40 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">reprocessors, Components, and CSS in JS or: How I Learned to Stop Worrying and Love the Website</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Jackie Balzer</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Behance’s codebase has existed in various states for 8 continuous years - which
+									includes multiple major redesigns, brand overhauls, backend framework changes, JavaScript frameworks, CSS
+									preprocessors, templating languages, feature births and deaths, product integrations, and more. <br /> <br />And
+									now, we are working on our latest project: moving our JavaScript and Sass to Vue.js and CSS Modules. <br />
+									<br />This talk explores our journey over the years, from how we choose which technologies to implement, how
+									we piecemeal large rewrites while maintaining developer sanity and website integrity (and how to cut corners
+									gracefully), how we manage technical debt, and perhaps most importantly: how to be at peace with the reality
+									of a fragmented codebase.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 12>15 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">De 2D a 3D: cómo diseñar interfaces de usuario en Realidad Virtual</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Fabio Cortes</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">El auge de la realidad virtual ha modificado la forma en que diseñamos y
+									desarrollamos experiencias de usuario. Similar al descubrimiento de las técnicas de la perspectiva en la
+									pintura, propias del Renacimiento, las interfaces de usuario se han volcado al desarrollo de ambientes en tres
+									dimensiones; antes que propiciar interfaces planas, en las que las animaciones eran el principal móvil de la
+									interacción con el usuario. Lo anterior, se ha convertido en un reto para todos los programadores y
+									diseñadores, dado que las múltiples posibilidades que dicho cambio trajo consigo aún no han sido del todo
+									exploradas: sonidos holofónicos, pistas ambientales, ciclos día/noche, simulaciones climáticas e interfaces
+									digitales antropomorfas, son tan sólo algunas de las posibilidades que la perspectiva en tres dimensiones han
+									surgido en el diseño de interfaces. <br /> <br />En esta charla, exploraremos algunas de estas posibilidades;
+									en especial, tres de los patrones de diseño más comunes: 1) inputs e interacciones; 2) espacio y escala; 3)
+									diseño de ambientes en tres dimensiones. La explicación de dichos patrones se dará en el marco de su
+									aplicación en los dos ''frameworks'' más populares para desarrollar realidad virtual, que son A-Frame y React
+									360.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 12:50 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">GROUP PHOTO</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 1:05 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">LUNCH</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 2:20 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Programming Visual Art</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Estefany Aguilar</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">In this session, I will talk about WebGL, p5.js, and how we can draw and make
+									interactive 2D and 3D grahics within web browsers.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 2:40 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Tracing Node. The Open Source Edition</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Daniel Khan</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Node alone doesn’t guarantee flawless code execution with stellar performance and
+									finding problems in distributed systems is hard. <br /> <br />Tracing gives you both visibility into
+									distributed code execution and the data you need to optimize performance and remove flaws in your code. <br />
+									<br />Join my talk where I cover <br /> <br />- the key performance metrics and how to collect them from
+									Node.js <br />- challenges of asynchronous tracing and content propagation <br />- the different Open Source
+									approaches and their use cases <br />- an end-to-end live sample that shows you how to get started with
+									tracing your apps today</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 3:15 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Automated Testing for the Modern Web</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Jennifer Shehane</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">End-to-end tests are a crucial part of the testing pyramid, yet they are often
+									overlooked entirely. They are notorious for being hard to set up, flaky when they run, and slow to debug. <br />
+									<br />Why is running end-to-end tests so unreliable? Is there a way to write useful end-to-end tests quickly
+									without the hair-pulling frustration? <br /> <br />In this talk we’ll look at the architecture behind
+									automated testing tools built on top of WebDriver. We’ll explore the communication flow between WebDriver and
+									the browser to uncover why end-to-end testing for the web has been so temperamental. <br /> <br />Then we’ll
+									delve into Cypress.io - a new, refreshing approach to testing web applications. We’ll examine Cypress’ anatomy
+									and show how its non-reliance on WebDriver makes it a better fit for testing the modern web. Using this new
+									tool, your tests can react to your application’s events in real time, read or alter web traffic on the fly,
+									and programmatically interact and control your application while testing. You’ll walk away with the means to
+									have your tests reliably run and quickly execute, giving you the ability to test your applications while you
+									develop for the first time.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 3:50 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">How I ended up automating my curtains and shouting at my laptop</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Luke Bonaccorsi</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">A few years ago I set about building a simple JavaScript chatbot that then quickly
+									grew into a chat based automation system that I use every day. The experience was, and still is, a fantastic
+									learning opportunity and in this talk I’ll share my progress, my reasons for doing it and what I’d like to do
+									in the future whilst also hoping to inspire you to build something weird.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 4:25 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">break</h1>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 4:45 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Web Gravity</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Nicole Sullivan</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">Making the web behave like the physical world</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid">
+						<div class="hour ae-2">- 5:20 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2">Speed, Speed, Speed: JavaScript vs C++ vs WebAssembly</h1>
+
+						<div class="ae-4 author-79 left margin-top-3">
+							<img src="assets/img/icon-16.png" width="64" class="avatar-79 round">
+							<h3>Franziska Hinkelmann</h3>
+						</div>
+
+						<ul class="grid grid-79 margin-top-6 later left">
+							<li class="col-12-12 ae-5">
+								<i class="material-icons">layers</i>
+								<h3>Description</h3>
+								<p class="tiny opacity-6">In Node.js, we can use WebAssembly modules and native C++ addons. If your app has
+									performance critical parts, should you stay in JavaScript? Or write a native C++ addon? Or use WebAssembly?
+									We’ll look at how these options compare performance wise and which one is best for different workloads. So the
+									next time you need to optimize for speed, you know your options.</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="fix-9-12 schedule-grid" style="margin-bottom: 150px;">
+						<div class="hour ae-2">- 5:55 pm</div>
+						<div class="quote-79 ae-3">“</div>
+						<h1 class="ae-2" style="color: #EA5C5C;">closing</h1>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="background" style="background-image:url(./assets/svg/schedule.svg)"></div>
+	</section>
+
+
+	<!-- Sponsors -->
+	<section data-name="sponsors" data-title="Sponsors" class="slide">
+		<div class="content">
+			<div class="container">
+				<div class="wrap">
+
+					<div class="fix-7-12">
+						<h1 class="ae-1">Want to be a sponsor?</h1>
+						<p class="ae-2"><span class="opacity-8">Our sponsorship slots are full now. Drop us a line for next year
+								opportunities at <a href="mailto:sponsors@jsconf.co">sponsors@jsconf.co</a></span></p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="background" style="background-image:url(./assets/svg/tickets.svg)"></div>
+	</section>
+
+	<!-- Footer -->
+	<nav class="panel bottom firstSlideOnly white hideForPhablet" style="background:rgba(255,255,255,0.975) !important;">
+		<div class="sections desktop">
+			<div class="left"></div>
+			<div class="right">
+				<ul class="menu uppercase trim">
+					<li><a href="https://jsconf.com/codeofconduct.html">Code of conduct</a></li>
+					<!-- <li><a href="#cfp">Call for proposals</a></li> -->
+					<!-- <li><a href="#archive">Archive</a></li> -->
+					<li class="cropRight"><a href="https://twitter.com/jsconfco" class="trimRight" target="_blank"><svg>
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+							</svg></a></li>
+					<li class="cropRight"><a href="https://facebook.com/jsconfco" class="trimRight" target="_blank"><svg>
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+							</svg></a></li>
+					<li class="cropRight"><a href="https://www.youtube.com/channel/UCIK8anLUIq0PHurZzNWe6IQ" class="trimRight" target="_blank"><svg>
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#youtube"></use>
+							</svg></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</body>
+
+</html>
