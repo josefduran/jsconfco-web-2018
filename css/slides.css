@@ -13574,3 +13574,43 @@ div > .item:not(:last-child) .details::before {
   left: -4.35em;
   z-index: -1;
 }
+
+@media only screen and (max-width: 767px) {
+  .item {
+    display: block;
+  }
+  .item .speaker-pic > div::after {
+    display: none
+  }
+  div > .item:not(:last-child) .details::before{
+      position: initial;
+  }
+  .item .details > div {
+    margin: 0
+  }
+  .item .speaker-pic span {
+    margin: 0;
+  }
+
+  .item .speaker-pic {
+    padding: 1em 2em 0em 2em;
+  }
+}
+
+@media only screen and (max-width: 833px) {
+  .item .details > div {
+        max-width: 18em;
+  }
+}
+
+@media only screen and (max-width: 1035px) {
+  .item .details > div {
+        max-width: 27em;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .item .details > div {
+        max-width: 33em;
+  }
+}
