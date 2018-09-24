@@ -13543,10 +13543,8 @@ p.remind-43 {
 }
 .item .details > div {
   border-radius: 0.5em;
-  /* padding: 1.5em; */
   padding: 0.5em 1em;
   margin: 1em 0;
-  /* background: #fff; */
   max-width: 865px;
   font-size: 26px;
   border-radius: 6px;
@@ -13566,7 +13564,7 @@ p.remind-43 {
   padding: 0;
   line-height: 150%;
 }
-.item .details::before {
+.item:not(:last-child) .details::before {
   content: '';
   width: 0;
   height: 100%;
