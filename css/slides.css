@@ -13563,6 +13563,7 @@ p.remind-43 {
   margin: 0;
   padding: 0;
   line-height: 150%;
+  word-wrap: break-word;
 }
 div > .item:not(:last-child) .details::before {
   content: '';
@@ -13611,6 +13612,6 @@ div > .item:not(:last-child) .details::before {
 
 @media only screen and (max-width: 1199px) and (min-width: 1036px){
   .item .details > div {
-        max-width: 30em;
+        max-width: 27em;
   }
 }
