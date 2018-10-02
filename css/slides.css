@@ -13470,7 +13470,13 @@ p.remind-43 {
 .speakers img {
 	display: block;
 	filter: grayscale(100%);
+
 }
+
+.speakers img:hover {
+	filter: grayscale(0%);
+}
+
 
 .hour {
 	position: absolute;
