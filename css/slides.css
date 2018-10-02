@@ -13470,6 +13470,7 @@ p.remind-43 {
 .speakers img {
 	display: block;
 	filter: grayscale(100%);
+	transition: filter 200ms linear 0.2s;
 
 }
 
