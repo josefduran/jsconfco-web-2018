@@ -13469,7 +13469,7 @@ p.remind-43 {
 
 .speakers img {
 	display: block;
-	border-radius: 20px;
+	filter: grayscale(100%);
 }
 
 .hour {
