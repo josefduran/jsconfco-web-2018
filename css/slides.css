@@ -13644,10 +13644,6 @@ div > .item:not(:last-child) .details::before {
     margin-top: 20%;
 }
 
-.silver .member-details:first-child > div{
-    background-color: #565662;
-}
-
 .member-details > div {
 	background-color: #fff;
 	margin: 5px;
@@ -13753,6 +13749,10 @@ div > .item:not(:last-child) .details::before {
 }
 
 .sponsors-description{
+	margin-top: 8%;
+}
+
+.partners-description{
 	margin-top: 15%;
 }
 
@@ -13766,6 +13766,7 @@ div > .item:not(:last-child) .details::before {
 	-webkit-transform: rotateX(20deg);
 	transform: rotateX(20deg);
 	background-color: #fff;
+	padding-right: 12px;
 }
 
 .partners > div{
@@ -13773,8 +13774,8 @@ div > .item:not(:last-child) .details::before {
 	padding-left: 10px;
 }
 
-.partners > div:nth-child(3) img{
-	padding: 8px;
+.partners > div:first-child img{
+	padding: 16px;
 }
 
 .partners img{
@@ -13811,7 +13812,9 @@ div > .item:not(:last-child) .details::before {
 		display: inline-block;
 		width: 30%;
 	}
-
+	.partners > div:first-child img{
+		padding: 8px 3px 4px;
+	}
 	h2{
 		font-size: 20px;
 	}
