@@ -13774,7 +13774,7 @@ div > .item:not(:last-child) .details::before {
 }
 
 .partners > div:nth-child(3) img{
-	padding: 10px;
+	padding: 8px;
 }
 
 .partners img{
