@@ -13536,13 +13536,14 @@ p.remind-43 {
   clear: both;
   padding: 0.25em 0;
   margin: 0.5em 0;
-  background: #fff;
+  background: #ffffff8f;
 }
 .item .details {
   position: relative;
   flex-grow: 1;
 }
 .item .details > div {
+	background-color: #fbfbfb8a;
   border-radius: 0.5em;
   padding: 0.5em 1em;
   margin: 1em 0;

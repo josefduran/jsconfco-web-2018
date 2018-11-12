@@ -6,3 +6,21 @@ ul.menu {
 .strong {
   font-weight: 600 !important;
 }
+
+.details ul, .details ul li{
+  list-style: unset;
+  list-style-position: inside;
+}
+
+.details.info{
+  background-color: #fbfbfb8a;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  margin: 1em 0;
+  font-size: 26px;
+  border-radius: 6px;
+  color: #202020;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
